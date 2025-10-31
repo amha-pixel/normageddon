@@ -1,14 +1,14 @@
 :root {
   /* Colours */
-  --color-bg: #cfceca; /* page background /*
+  --color-bg: #724743; /* page background /*
 
   /* Header */
-  --color-head-bg: #625e5c;
+  --color-head-bg: #e5dece;
 
   /* Logotype */
-  --color-logotype-bg: #2a2828;
-  --color-text-logotype: #c1bfb8;
-  --font-logotype-size: 1rem;
+  --color-logotype-bg: #363a2e;
+  --color-text-logotype: #e5dece;
+  --font-logotype-size: 2rem;
 
   /* Global menu */
   --color-menu-bg: #5a5b5e;
@@ -46,7 +46,7 @@
   --color-cta-newscard-bg-inverted: #7b7d83;
 
   /* Fonts */
-  --font-family-sans: ui-sans-serif;
+  --font-family-sans:"rubik", ui-sans-serif;
   /* --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
