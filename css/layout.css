@@ -84,3 +84,29 @@ footer ul {
 }
 
 /* LAYOUT FOR HOTSPOTS */
+/* --- Tooltip styling --- */
+.tooltip {
+  position: absolute;
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 1000;
+  max-width: 200px;
+  line-height: 1.4;
+}
+
+/* --- Hotspot markering --- */
+svg .hotspot {
+  cursor: pointer;
+  pointer-events: all;
+  transition: opacity 0.2s ease;
+}
+
+svg .hotspot:hover {
+  opacity: 0.8;
+  filter: drop-shadow(0 0 6px rgba(0,0,0,0.4));
+}
