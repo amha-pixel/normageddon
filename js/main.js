@@ -74,3 +74,18 @@ document.querySelector(".close_btn").addEventListener("click", () => {
   document.getElementById("modalOverlay").classList.remove("active");
 });
 
+// MODAL 2-kode
+const overlay2 = document.getElementById("modalOverlay2");
+document.querySelectorAll(".openModal2").forEach(btn => {
+  btn.addEventListener("click", () => {
+    overlay2.classList.add("active");
+  });
+});
+overlay2.querySelector(".close_btn").addEventListener("click", () => {
+  overlay2.classList.remove("active");
+});
+overlay2.addEventListener("click", (e) => {
+  if (e.target === overlay2) {
+    overlay2.classList.remove("active");
+  }
+});
