@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
-    <title>Emergency Site</title>
+    <title>Normageddon</title>
   </head>
   <body id="frontpage">
     <header>
@@ -35,8 +35,8 @@
       <div id="main-disclamer-content">
         <img src="warning" alt="ICON" />
         <div>
-          <h1>OPBRUD</h1>
-          <p class="sub">Tiderne skifter - orienter dig her for at følge med i samfundstransformationen</p>
+          <h1>OPBRUD - Tiderne skifter</h1>
+          <p class="sub">Skal mennesker kunne mere eller mindre? Skal vi yde mere eller mindre? Lige nu sker en århundreders kulturel tovtrækning om menneskers plads i Verden og funktion i samfundet. Orienter dig her for at følge med i samfundstransformationen</p>
         </div>
       </div>
     </section>
@@ -47,11 +47,12 @@
           <div class="daily_text">
             <h2>Deltag i genlotteriet</h2>
             <p>
-              Lær mere om, hvad du skal være opmærksom på, hvis du ønsker at manipulere med din genetik.
+              Lær mere om, hvad du skal være opmærksom på, hvis du ønsker at manipulere din genetik.
             </p>
-            <a href="" class="cta_btn">Lær mere</a>
+            <a href="instruction.html" class="cta_btn">Lær mere</a>
           </div>
         </article>
+        
         <article class="daily_card">
           <img src="img/formular_img.png" alt="Mand der slår armene ud i beundring" />
           <div class="daily_text">
@@ -59,7 +60,7 @@
             <p>
               Indberet dine observerede normbrud, hvorefter adfærden vurderes egnet eller uegnet til at indgå i den kommende og opdaterede udgave af vores samfundskontrakt.
             </p>
-            <a href="" class="cta_btn">Indberet</a>
+            <a href="register.html" class="cta_btn">Indberet</a>
             <p>Vi bestræber os på at være så anonyme som muligt.</p>
           </div>
         </article>
@@ -70,14 +71,16 @@
           <p>Minister for Arbejdsglæde og Samfundssind beder borgerne om at stresse ned.</p>
           <img src="img/artikel1.png" alt="news_img" />
           <p>Følg med i debatten om work life balance, hvor vigtige stemmer får lov til at definere, hvordan andre bør have det.</p>
-          <a class="cta_btn" href="">Læs mere</a>
+          <button class="cta_btn openModal">Læs mere</button>
         </article>
+
         <article class="news_card">
           <h3>✴️ Decemberprofetien ✴️</h3>
           <img src="img/artikel2.png" alt="news_img" />
           <p>Læs om de tre Neurotyper under Samfundets Stjernehimmel, og lad dit neuroskop guide dig gennem julen. </p>
           <a class="cta_btn" href="">Læs mere</a>
         </article>
+
         <article class="news_card">
           <h3>🔥OPGRADÉR DIN HJERNE🔥</h3>
           <h4> FÅ KAOS MED KAPACITET! </h4>
@@ -115,7 +118,49 @@
         </ul>
       </nav>
     </footer>
+    <!-- MODAL POPUP -->
+<div id="modalOverlay" class="modal_overlay">
+
+    <div class="modal_box">
+
+        <button id="closeModal" class="close_btn">X</button>
+        <div class="modal_header">
+          <h1 class="popup_title">Stress er ikke en folkesygdom. Det er en folkesport</h1>
+        </div>
+        
+        <p class="popup_subtitle">
+          Af Jette Gladriksen, minister for Arbejdsglæde og Samfundssind
+        </p>
+        
+
+        <img class="popup_img" src="img/artikel1.png" alt="Artikel billede">
+
+        <div class="grid-2">
+
+            <div>
+                <h2>Vi taler meget om stress i disse år. For meget, måske</h2>
+                <p>Der findes næppe et eneste dansk frokostbord, hvor nogen ikke har erklæret sig “rundt på gulvet.” Men i Danmark står vi sammen — også når det går lidt hurtigt.</p>
+
+                <h2>Jeg vil gerne slå fast: Stress er ikke et tegn på sygdom</h2>
+                <p>Det er et tegn på engagement. Det er et udtryk for, at danskerne stadig vil yde, stadig vil bidrage, stadig vil tage ansvar.</p>
+
+                <h2>Selvfølgelig skal vi passe på hinanden</h2>
+                <p>Men vi skal også passe på, at omsorgen ikke bliver en sovepude. Travlhed er ikke sygdom.</p>
+            </div>
+
+            <div>
+                <h2>Vi skal ikke afskaffe stress</h2>
+                <p>Vi skal forædle den. Bruge den som energi og som brændstof til vores fælles fremtid.</p>
+
+                <h2>Vi har ikke brug for flere sygemeldinger</h2>
+                <p>Danmark har brug for flere, der melder sig klar, ikke flere der melder sig syge.</p>
+
+                <p>Som vi siger i ministeriet: Lev med det.</p>
+            </div>
+        </div>
+    </div>
+</div>
     <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -61,3 +61,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+const openBtns = document.querySelectorAll(".openModal");
+
+openBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.getElementById("modalOverlay").classList.add("active");
+  });
+});
+
+document.querySelector(".close_btn").addEventListener("click", () => {
+  document.getElementById("modalOverlay").classList.remove("active");
+});
+
