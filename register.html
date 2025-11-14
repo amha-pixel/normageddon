@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Normageddon</title>
   </head>
@@ -34,18 +34,100 @@
     </header>
 
     <main>
-      <h1>INDBERET</h1>
-      <section id="form-section">
-        <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
-        </article>
-        <form id="webform"></form>
-      </section>
-      <section id="form-summary">
-        <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
+      <section id="report-section">
+        <article class="report_card">
+          <h1>Indberet et normbrud</h1>
+          <p class="report_intro">
+            Her kan du indberette en hændelse, hvor du har observeret et normbrud, en uretfærdighed eller noget, der bør undersøges nærmere.
+          </p>
+      
+          <form id="incidentForm" novalidate>
+            <!-- TYPE AF HÆNDELSE -->
+            <div class="form_group">
+              <label for="incidentType">Hvad handler indberetningen om? <span class="required">*</span></label>
+              <select id="incidentType" name="incidentType" required>
+                <option value="">Vælg kategori</option>
+                <option value="adfærd">Adfærd / normbrud</option>
+                <option value="arbejdsmiljø">Arbejdsmiljø / stress</option>
+                <option value="diskrimination">Diskrimination / eksklusion</option>
+                <option value="andet">Andet</option>
+              </select>
+              <p class="error_msg" data-error-for="incidentType"></p>
+            </div>
+      
+            <!-- KORT TITEL -->
+            <div class="form_group">
+              <label for="title">Kort titel på hændelsen <span class="required">*</span></label>
+              <input type="text" id="title" name="title" required maxlength="80" placeholder="Fx: Minister råbte af medarbejder foran kolleger">
+              <p class="helper_text"><span id="titleCounter">0</span>/80 tegn</p>
+              <p class="error_msg" data-error-for="title"></p>
+            </div>
+      
+            <!-- STED -->
+            <div class="form_group form_group_inline">
+              <div>
+                <label for="location">Hvor skete det? <span class="required">*</span></label>
+                <input type="text" id="location" name="location" required placeholder="Fx: Snapstinget, Christiansborg">
+                <p class="error_msg" data-error-for="location"></p>
+              </div>
+              <div>
+                <label for="date">Dato <span class="required">*</span></label>
+                <input type="date" id="date" name="date" required>
+                <p class="error_msg" data-error-for="date"></p>
+              </div>
+            </div>
+      
+            <!-- BESKRIVELSE -->
+            <div class="form_group">
+              <label for="description">Beskriv hændelsen <span class="required">*</span></label>
+              <textarea id="description" name="description" rows="6" required placeholder="Beskriv hvad der skete, hvem der var involveret, og hvorfor du mener, det er relevant at indberette."></textarea>
+              <p class="error_msg" data-error-for="description"></p>
+            </div>
+      
+            <!-- ANONYMITET -->
+            <div class="form_group">
+              <p class="label_like">Vil du være anonym?</p>
+              <label class="checkbox_label">
+                <input type="checkbox" id="anonymous" name="anonymous">
+                <span>Ja, skjul mit navn i den videre behandling af indberetningen</span>
+              </label>
+            </div>
+
+            <!-- Navn (skjules hvis anonym) -->
+            <div class="form_group" id="nameField">
+              <label for="fullName">Dit navn</label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Fx: Sigrid Mortensen"
+              >
+              <p class="helper_text">Kun hvis du ikke indberetter anonymt.</p>
+              <p class="error_msg" data-error-for="fullName"></p>
+            </div>
+      
+            <!-- KONTAKTOPLYSNINGER (VALGFRIT) -->
+            <div class="form_group">
+              <label for="email">Din e-mail (valgfrit)</label>
+              <input type="email" id="email" name="email" placeholder="Hvis vi må kontakte dig for opfølgende spørgsmål">
+              <p class="error_msg" data-error-for="email"></p>
+            </div>
+      
+            <!-- SAMTYKKE -->
+            <div class="form_group">
+              <label class="checkbox_label">
+                <input type="checkbox" id="consent" name="consent" required>
+                <span>Jeg accepterer, at min indberetning behandles efter retningslinjerne for Normageddon-projektet. <span class="required">*</span></span>
+              </label>
+              <p class="error_msg" data-error-for="consent"></p>
+            </div>
+      
+            <!-- KNAP -->
+            <div class="form_actions">
+              <button type="submit" class="cta_btn">Indsend indberetning</button>
+              <p id="formSuccess" class="form_success" aria-live="polite"></p>
+            </div>
+          </form>
         </article>
       </section>
     </main>
@@ -76,6 +158,7 @@
       </nav>
     </footer>
     <script src="js/burger.js"></script>
+    <script src="js/forms.js"></script>
     <!-- <script src="js/main.js"></script> -->
   </body>
 </html>

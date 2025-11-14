@@ -30,3 +30,158 @@
   margin: 0 0 1.2rem 0;
   padding: 0;
 }
+
+/* Sektion / kort */
+#report-section {
+  padding: 2rem 2rem;
+}
+
+.report_card {
+  background: var(--color-news-bg, #DBE2F5);
+  border-radius: var(--border-radius, 20px);
+  padding: 1rem 4rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.report_card h1 {
+  font-size: var(--headline1-size, 2rem);
+  margin-bottom: 0.5rem;
+}
+
+.report_intro {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Formular layout */
+#incidentForm {
+  display: grid;
+  gap: 1rem;
+}
+
+.form_group {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.form_group_inline {
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 600px) {
+  .form_group_inline {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Labels, inputs, textarea, select */
+label,
+.label_like {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.required {
+  color: #d33d27;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  font: inherit;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 0.55rem 0.7rem;
+  background: #fff;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #6F90EB;
+  border-color: #6F90EB;
+}
+
+/* Checkbox */
+.checkbox_label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.checkbox_label input[type="checkbox"] {
+  margin-top: 0.15rem;
+}
+
+/* Hjælpetekst & fejl */
+.helper_text {
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.error_msg {
+  font-size: 0.78rem;
+  color: #d33d27;
+  min-height: 1em;
+}
+
+/* Knap og succes-besked */
+.form_actions {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form_success {
+  font-size: 0.9rem;
+  color: #166534; /* grøn */
+}
+
+/* Din eksisterende cta_btn får bare lidt hover */
+.cta_btn {
+  background: var(--color-cta-newscard-bg, #ffa680);
+  border-radius: 30px;
+  padding: 10px 24px;
+  font-size: 16px;
+  color: var(--color-text-inverted, #fffae2);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.86,0,0.14,1),
+              box-shadow 0.2s ease;
+}
+
+.cta_btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.18);
+}
+
+.cta_btn:focus {
+  outline: 2px solid #231f20;
+  outline-offset: 2px;
+}
+
+.form_actions .cta_btn {
+  width: auto;            /* ← Knappen bliver kun så bred som indholdet */
+  display: inline-block;  /* ← Sikrer naturlig størrelse */
+  align-self: center;     /* ← Centrerer knappen i boksen */
+  padding: 10px 24px;     /* ← Kan du tilpasse frit */
+}
+
+#nameField {
+  display: grid;   /* synligt som standard */
+  gap: 0.35rem;    /* samme spacing som andre form_group */
+}
+
+#nameField.hidden {
+  display: none;   /* skjul feltet, når klassen 'hidden' er på */
+}
+
