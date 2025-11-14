@@ -40,3 +40,15 @@
 .info-box:nth-of-type(2n) {
   background-color: var(--color-infobox-2-bg);
 }
+
+/* SVG baggrund GUL */
+
+svg {
+  background-color: #FCEB94;
+}
+
+section.info-graphic {
+  background: #FCEB94;
+  padding: 20px 0;
+  margin: 0;            /* ← fjern hvide kanter i siderne */
+}

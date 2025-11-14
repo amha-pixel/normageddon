@@ -136,14 +136,3 @@ footer a {
   font-size: 0.7rem;
 }
 
-/* SVG baggrund GUL */
-
-svg {
-  background-color: #FCEB94;
-}
-
-section.info-graphic {
-  background: #FCEB94;
-  padding: 20px 0;
-  margin: 0;            /* ← fjern hvide kanter i siderne */
-}
