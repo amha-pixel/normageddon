@@ -89,3 +89,33 @@ overlay2.addEventListener("click", (e) => {
     overlay2.classList.remove("active");
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay3 = document.getElementById("modalOverlay3");
+
+  // Åbn modal 3
+  document.querySelectorAll(".openModal3").forEach(btn => {
+    btn.addEventListener("click", () => {
+      overlay3.classList.add("active");
+    });
+  });
+
+  // Luk via X
+  overlay3.querySelector(".close_btn").addEventListener("click", () => {
+    overlay3.classList.remove("active");
+  });
+
+  // Klik udenfor boksen lukker
+  overlay3.addEventListener("click", (e) => {
+    if (e.target === overlay3) {
+      overlay3.classList.remove("active");
+    }
+  });
+
+  // ESC lukker også
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      overlay3.classList.remove("active");
+    }
+  });
+});
