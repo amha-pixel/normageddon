@@ -291,6 +291,10 @@ svg .hotspot:hover {
   color: #fffae2;
   border: none;
   cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.14, 1);
 }
 
-
+.cta_btn:hover {
+  background-color: #6F90EB;
+  transform: scale(1.1);
+}
