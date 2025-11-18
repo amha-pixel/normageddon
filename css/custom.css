@@ -1,4 +1,4 @@
-:root {
+:root{
   /* Colours */
   --color-bg: #FCEB94; /* page background /*
 
@@ -65,4 +65,92 @@
   --color-info-bg: #FFFFFF;
   --color-infobox-1-bg: #FCEB94;
   --color-infobox-2-bg: #DEF5DB;
+}
+
+.darkmode{
+  /* DARK MODE */
+  /* Base baggrund – meget mørk, men ikke helt sort */
+  --color-bg: #181821;
+
+  /* Header – mørk baggrund med dæmpet, varm brandorange */
+  --color-head-bg: #300101;
+
+  /* Logotype */
+  --color-logotype-bg: #181821;           /* ikke ren sort */
+  --color-text-logotype: #8a8884;        /* varm, lys tekst */
+  --font-logotype-size: 2rem;            /* uændret */
+
+  /* Global menu – mørkere, mere dæmpet blå, så den matcher dark mode */
+  --color-menu-bg: #27345E;
+
+  /* Links / knapper */
+  --color-link-bg: #232430;              /* lysere end baggrund = fremhævet */
+  --color-link-hover: #8a8884;           /* ikke ren hvid */
+  --color-link-active: #8a8884;          /* lidt lysere, god kontrast */
+  --border-radius-links: 20px;
+
+  /* Mørk rubrikbaggrund, så teksten står klart */
+  --color-headline-bg: #000000;
+  --color-headline-text-page: #b2b2be;   /* varm, off-white */
+
+  /* Tekstfarver */
+  --color-text: #b2b2be;                 /* primær tekst (lys, men ikke #fff) */
+  --color-text-inverted: #b2b2be;        /* bruges på lyse flader/CTA-kort */
+
+  /* Cards – lysere end baggrunden, så de træder frem */
+  --color-card-bg: #464646;
+
+  /* CTA cards – brand-orange, men mørkere og lidt mindre satureret */
+  --color-cta-card-bg: #300101;
+
+  /* News-cards – to nuancer, begge mørke men tydeligt adskilte */
+  --color-news-bg: #6c6c70;              /* primær nyhedsboks */
+  --color-news-bg-inverted: #202738;     /* “inverted” variant m. blåligt skær */
+
+  /* CTA inde i nyhedskort – matcher brandfarver dæmpet */
+  --color-cta-newscard-bg: #2e2b29;      /* varm orange */
+  --color-cta-newscard-bg-inverted: #3C4C86; /* mørk, dæmpet blå */
+
+  /* Infographics – ikke kridhvide bokse i dark mode */
+  --color-info-bg: #4e5286;
+  --color-infobox-1-bg: #2C2730;   /* varm grå m. hint af din gule brandfarve */
+  --color-infobox-2-bg: #23322B;   /* mørk grønlig grå til variation */
+}
+
+body{
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+html {
+  background-color: var(--color-bg);
+}
+
+.cta-button{
+  background-color: var(--base-color);
+}
+#theme-switch{
+height: 50px;
+width: 50px;
+padding: 0%;
+border-radius: 50%;
+background-color: var(--base-variant);
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+top: 50px;
+right: 50px;
+}
+#theme-switch svg{
+  fill: var(--primary-color);
+}
+#theme-switch svg:last-child{
+  display: none;
+}
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+.darkmode #theme-switch svg:last-child{
+  display: block;
 }
