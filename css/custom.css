@@ -154,3 +154,20 @@ right: 50px;
 .darkmode #theme-switch svg:last-child{
   display: block;
 }
+
+#main-disclamer-content {
+  display: flex;
+  align-items: center;        /* Vertikal centrering */
+  gap: 2rem;                  /* Luft mellem ikon og tekst */
+}
+
+/* Styr ikonets størrelse */
+#main-disclamer-content img {
+  width: 400px;               /* Ændr denne for at regulere størrelse */
+  height: auto;
+  display: block;
+}
+
+#main-disclamer-content div {
+  max-width: 600px;           /* Holder tekstfeltet pænt */
+}
