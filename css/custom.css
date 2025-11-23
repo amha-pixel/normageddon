@@ -7,7 +7,7 @@
 
   /* Logotype */
   --color-logotype-bg: #000;
-  --color-text-logotype: #e5dece;
+  --color-text-logotype: #fffae2;
   --font-logotype-size: 2rem;
 
   /* Global menu */
@@ -46,20 +46,20 @@
 
   /* Fonts */
   --font-family-sans:"rubik", ui-sans-serif;
-  /* --font-weight-light: 300;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-bold: 700; */
+  --font-weight-bold: 700;
 
   /* Text sizes */
   --logotype-size: 1rem;
-  --headline1-size: 2rem;
-  --headline2-size: 1rem;
-  --headline3-size: 1rem;
-  --bodytext-size: 1rem;
-  --cta-text-size: 1rem;
+  --headline1-size: 3rem;
+  --headline2-size: 2.25rem;
+  --headline3-size: 2rem;
+  --bodytext-size: 1.25rem;
+  --cta-text-size: 1.25rem;
   --followup-text-size: 1rem;
-  --form-submit-size: 1rem;
+  --form-submit-size: 0.875rem;
 
   /* Infographics */
   --color-info-bg: #FFFFFF;
@@ -130,8 +130,8 @@ html {
   background-color: var(--base-color);
 }
 #theme-switch{
-height: 50px;
-width: 50px;
+height: 35px;
+width: 35px;
 padding: 0%;
 border-radius: 50%;
 background-color: var(--base-variant);
@@ -139,8 +139,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 position: fixed;
-top: 50px;
-right: 50px;
+top: 65px;
+left: 10px;
 }
 #theme-switch svg{
   fill: var(--primary-color);
